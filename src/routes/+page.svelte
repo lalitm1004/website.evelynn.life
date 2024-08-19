@@ -1,6 +1,6 @@
 <script lang="ts">
-
-    import Hero from '$lib/components/Hero.svelte';
+    import Hero from '$lib/components/landing/Hero.svelte';
+    import HowItWorks from '$lib/components/landing/HowItWorks.svelte'
 </script>
 
 <main>
@@ -8,7 +8,7 @@
         <Hero />
     </section>
     <section class={`min-h-[100dvh] w-screen grid place-items-center`}>
-        
+        <HowItWorks />
     </section>
 </main>
 

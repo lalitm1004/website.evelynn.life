@@ -15,3 +15,7 @@
         }
     })
 </script>
+
+<div class={`mt-40`}>
+    {JSON.stringify(schedule)}
+</div>
