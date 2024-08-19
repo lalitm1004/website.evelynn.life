@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Inter' sans-serif;
+    }
+}
+
+:root {
+    --scroll-width: 10px;
+    --scroll-height: 10px;
+
+    --scroll-track-rgb: #1C1917;
+    --scroll-track-border-radius: 0px;
+
+    --scroll-thumb-rgb: #292524;
+    --scroll-thumb-border-radius: 0px;
+
+    --scroll-thumb-hover-rgb: #44403C;
+}
+
+/* Scrollbar */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: var(--scroll-width); /* Width of the scrollbar */
+    height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+    border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+    border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin; /* Sets the scrollbar width to thin */
+    scrollbar-color: var(--scroll-thumb-rgb) var(--scroll-track-rgb); /* Sets the thumb and track color */
+}
+
+body::-webkit-scrollbar {
+    width: var(--scroll-width); /* Width of the scrollbar */
+    height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+    border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+    border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
+}
